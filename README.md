@@ -12,6 +12,7 @@ Frontal asymmetry in alpha oscillations is assumed to be associated with individ
  
 
 ## Process
+First EEG is accuired via OpenVibe accuisition server. Then is computed FFT. It is computed aplha power and visualized into sculpture as spectral topography in 3D. Also it is log substracted from channels Fp1 and Fp2 in equation FAA = log(Fp2-Fp1)/(Fp1+Fp2). This is vizualized into OpenVibe.
 
 ## How does it work...?
 

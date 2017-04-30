@@ -32,8 +32,14 @@ end
 %   Reserved0
 %   Reserved1
 %   Reserved2
+
+% Start communication with Arduino
+arduino = serial('COM3', 'BAUD', 9600);
+fopen(arduino);
+pause(3);
+
 header = read(t, 8, 'uint32');
-times = 10;
+times = 1;
 if ~isempty(header)   
     while true
         buffer = read(t, header(5) * header(4) * times, 'double');
@@ -46,7 +52,13 @@ if ~isempty(header)
         disp('OpenVibe stream color packet'); disp(ledtopo(dataVector)); 
             
         % Sending values to Arduino to led LEDs
-        disp('This goes to Arduino'); disp(ledlights(ledtopo(dataVector))); 
+        disp('This goes to Arduino'); disp(ledlights(ledtopo(dataVector)));
         
+        try
+            colorArray = sprintf('%d, ', ledlights(ledtopo(dataVector)));
+            fprintf(arduino, [colorArray(1:end-1), '\n']);
+        catch
+            fclose(arduino);
+        end   
     end
 end

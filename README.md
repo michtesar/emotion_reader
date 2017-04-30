@@ -28,7 +28,7 @@ Acquistion of electroencephalographic (EEG) cerebral activity is recorded by Bio
 
 For online visualization was used LED diodes belt specifically changed and adapted for our project. Every single LED diode simulate at avatar’s head one of 32 active EEG channels. Reference electrodes included.
 
-###Programming Languague
+### Programming Languague
 OpenVibe, Python, Arduino, OpenSesame, CodeLite, C++ 
 
 ## Interpretation

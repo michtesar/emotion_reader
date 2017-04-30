@@ -1,3 +1,5 @@
+![EmotionReader project](https://github.com/neuropacabra/EmotionReader/blob/doc/logo.png?raw=true)
+
 # EmotionReader
 Hackaton Hack-The-Brain project of reading emotion in real time with Biosemi ActiveTwo EEG.
 Emotion recognition could be done from the text, speech, facial expression or gesture. In this project, we concentrate on recognition of “inner” emotions from EEG signals. We propose real time fractal dimension based algorithm of quantification of basic emotion using valence emotion model. The subject emotions are recognized and visualized in real time on avatar’s head through LED diodes which simulate every single electrode.
@@ -25,6 +27,7 @@ Valence could reach values from 0 to 10. Visual stimuli for the experiment have 
 Acquistion of electroencephalographic (EEG) cerebral activity is recorded by Biosemi ActiveTwo system. It was collected scalp signal from 32 active channels. EEG montage was performed by ten-twenty international electrode placement system of measurement with Cz as central electrode and two CMS and DRL reference channels (recording is reference free). 
 
 For online visualization was used LED diodes belt specifically changed and adapted for our project. Every single LED diode simulate at avatar’s head one of 32 active EEG channels. Reference electrodes included.
+
 ###Programming Languague
 OpenVibe, Python, Arduino, OpenSesame, CodeLite, C++ 
 

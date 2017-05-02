@@ -41,6 +41,7 @@ pause(3);
 header = read(t, 8, 'uint32');
 if ~isempty(header)   
     while true
+    % FIX-ME: THere are 8 values e.g. 32 bytes. mabye this should be fixed.
         buffer = read(t, header(5) * header(4), 'double');
         stream = reshape(buffer, [header(4), header(5)])';
         plot(stream);

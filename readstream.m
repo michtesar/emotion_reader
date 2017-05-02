@@ -39,11 +39,10 @@ fopen(arduino);
 pause(3);
 
 header = read(t, 8, 'uint32');
-times = 1;
 if ~isempty(header)   
     while true
-        buffer = read(t, header(5) * header(4) * times, 'double');
-        stream = reshape(buffer, [header(4), header(5) * times])';
+        buffer = read(t, header(5) * header(4), 'double');
+        stream = reshape(buffer, [header(4), header(5)])';
         plot(stream);
         dataVector = mean(stream, 1);
         
